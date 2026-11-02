@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="red">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Mayhem Games — Jogue. Divirta-se. Faça o caos.</title>
+<meta name="description" content="Launcher oficial da Mayhem Games: todos os nossos jogos HTML direto no navegador, com suporte a controle.">
+<meta name="theme-color" content="#09090b">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Mayhem Games">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="assets/icon-192.png" type="image/png">
+<link rel="apple-touch-icon" href="assets/icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===== ÍCONES ===== -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-home" viewBox="0 0 24 24"><path d="M3 11l9-8 9 8M5 10v10h5v-6h4v6h5V10"/></symbol>
+    <symbol id="i-pad" viewBox="0 0 24 24"><path d="M6 8h12a4 4 0 014 4v3a3 3 0 01-5.4 1.8L15 15H9l-1.6 1.8A3 3 0 012 15v-3a4 4 0 014-4z"/><path d="M7 10.5v3M5.5 12h3"/><path d="M16 11h.01M18 13h.01" stroke-width="2.6"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 2.5l2.9 6.2 6.6.8-4.9 4.6 1.3 6.7L12 17.5l-5.9 3.3 1.3-6.7L2.5 9.5l6.6-.8z"/></symbol>
+    <symbol id="i-cfg" viewBox="0 0 24 24"><path d="M4 6h8M18 6h2M4 12h2M12 12h8M4 18h10M20 18h0"/><circle cx="15" cy="6" r="2.2"/><circle cx="9" cy="12" r="2.2"/><circle cx="17" cy="18" r="2.2"/></symbol>
+    <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01" stroke-width="2.4"/></symbol>
+    <symbol id="i-fs" viewBox="0 0 24 24"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></symbol>
+    <symbol id="i-fsx" viewBox="0 0 24 24"><path d="M9 4v5H4M15 4v5h5M9 20v-5H4M15 20v-5h5"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="M7 4.5l13 7.5-13 7.5z" fill="currentColor"/></symbol>
+    <symbol id="i-arr" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-back" viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6"/></symbol>
+    <symbol id="i-cr" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></symbol>
+    <symbol id="i-cl" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></symbol>
+    <symbol id="i-re" viewBox="0 0 24 24"><path d="M20 12a8 8 0 11-2.4-5.7M20 4v5h-5"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 010 18M12 3a14 14 0 000 18"/></symbol>
+    <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 20s-8-5-8-11a4.5 4.5 0 018-2.7A4.5 4.5 0 0120 9c0 6-8 11-8 11z"/></symbol>
+    <symbol id="i-vol" viewBox="0 0 24 24"><path d="M4 9v6h4l5 4V5L8 9H4zM17 8.5a5 5 0 010 7"/></symbol>
+    <symbol id="i-yt" viewBox="0 0 24 24"><rect x="2.5" y="5.5" width="19" height="13" rx="4"/><path d="M10 9.5v5l4.5-2.5z" fill="currentColor"/></symbol>
+    <symbol id="i-dc" viewBox="0 0 24 24"><path d="M7 6c3-1.3 7-1.3 10 0l2.5 10c-1.5 1.5-3.5 2.3-5.5 2.5l-.8-1.5M17 6l-1 1M7 6l1 1M5.5 16c1.5 1.5 3.5 2.3 5.5 2.5l.8-1.5"/><circle cx="9.3" cy="12" r="1.2" fill="currentColor"/><circle cx="14.7" cy="12" r="1.2" fill="currentColor"/></symbol>
+    <symbol id="i-tw" viewBox="0 0 24 24"><path d="M4.5 4.5l15 15M19.5 4.5l-15 15"/></symbol>
+  </defs>
+</svg>
+
+<div id="app" class="app">
+
+  <!-- ===== MENU LATERAL (desktop) ===== -->
+  <aside class="side" id="side">
+    <a class="side-logo" href="#/" aria-label="Mayhem Games — início"><img src="assets/logo-mayhem.png" alt="Mayhem Games" width="310" height="90"></a>
+    <nav class="side-nav" aria-label="Principal">
+      <a href="#/" data-route="home"><svg class="ic"><use href="#i-home"/></svg><span>Início</span></a>
+      <a href="#/jogos" data-route="jogos"><svg class="ic"><use href="#i-pad"/></svg><span>Jogos</span></a>
+      <a href="#/sobre" data-route="sobre"><svg class="ic"><use href="#i-star"/></svg><span>Sobre Nós</span></a>
+      <a href="#/config" data-route="config"><svg class="ic"><use href="#i-cfg"/></svg><span>Configurações</span></a>
+      <a href="#/creditos" data-route="creditos"><svg class="ic"><use href="#i-info"/></svg><span>Créditos</span></a>
+    </nav>
+    <div class="side-foot">
+      <a class="padpanel" href="#/config/controle" title="Configurações do controle" aria-live="polite"></a>
+      <div class="side-brand"><b>MayhemGames</b><i>Jogando sem limites.</i></div>
+    </div>
+  </aside>
+
+  <!-- ===== CONTEÚDO ===== -->
+  <div class="main">
+    <header class="top">
+      <a class="top-logo" href="#/" aria-label="Início"><img src="assets/logo-mayhem.png" alt="Mayhem Games" width="124" height="36"></a>
+      <div class="top-r">
+        <a class="padpanel compact" href="#/config/controle" title="Configurações do controle" aria-live="polite"></a>
+        <button class="ib" id="fsBtn" type="button" aria-label="Tela cheia" title="Tela cheia (F)">
+          <svg class="ic"><use href="#i-fs"/></svg>
+        </button>
+      </div>
+    </header>
+
+    <main id="view" class="view" tabindex="-1"></main>
+  </div>
+
+  <!-- ===== MENU INFERIOR (celular/tablet) ===== -->
+  <nav class="bottom" aria-label="Principal">
+    <a href="#/" data-route="home"><svg class="ic"><use href="#i-home"/></svg><span>Início</span></a>
+    <a href="#/jogos" data-route="jogos"><svg class="ic"><use href="#i-pad"/></svg><span>Jogos</span></a>
+    <a href="#/sobre" data-route="sobre"><svg class="ic"><use href="#i-star"/></svg><span>Sobre</span></a>
+    <a href="#/config" data-route="config"><svg class="ic"><use href="#i-cfg"/></svg><span>Ajustes</span></a>
+    <a href="#/creditos" data-route="creditos"><svg class="ic"><use href="#i-info"/></svg><span>Créditos</span></a>
+  </nav>
+</div>
+
+<!-- dicas de botões do controle -->
+<div class="hints" id="hints" hidden></div>
+<!-- notificações -->
+<div class="toasts" id="toasts" aria-live="polite"></div>
+
+<!-- ===== PLAYER ===== -->
+<section class="player" id="player" hidden aria-label="Jogo">
+  <div class="p-bar" id="pBar">
+    <button class="pb" id="pBack" type="button" title="Voltar ao launcher"><svg class="ic"><use href="#i-back"/></svg><span>Launcher</span></button>
+    <div class="p-title" id="pTitle"></div>
+    <div class="p-btns">
+      <button class="pb" id="pReload" type="button" title="Reiniciar jogo"><svg class="ic"><use href="#i-re"/></svg></button>
+      <button class="pb" id="pFs" type="button" title="Tela cheia"><svg class="ic"><use href="#i-fs"/></svg><span>Tela cheia</span></button>
+      <button class="pb" id="pHide" type="button" title="Esconder barra"><svg class="ic"><use href="#i-cl" style="transform:rotate(90deg);transform-origin:center"/></svg></button>
+    </div>
+  </div>
+  <button class="p-tab" id="pTab" type="button" title="Mostrar barra" hidden><svg class="ic"><use href="#i-cr" style="transform:rotate(90deg);transform-origin:center"/></svg></button>
+  <div class="p-load" id="pLoad"><div class="spin"></div><span>Carregando…</span></div>
+  <iframe id="pFrame" title="Jogo" allow="gamepad; fullscreen; autoplay; accelerometer; gyroscope" allowfullscreen></iframe>
+  <div class="p-exit" id="pExit" hidden>Segure <b></b> + <b></b> para sair do jogo</div>
+</section>
+
+<script src="games.js"></script>
+<script src="gamepad.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
